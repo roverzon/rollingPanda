@@ -1,0 +1,22 @@
+{
+  "name": "rollingPanda",
+  "description": "",
+  "main": "",
+  "authors": [
+    "rov01 <roverzon@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/roverzon/rollingPanda",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "quill": "^0.20.1"
+  }
+}
