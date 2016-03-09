@@ -1,0 +1,23 @@
+#panel-wrapper{
+  margin-top: 100px;
+  height: 500px;
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+#question-panel{
+  margin-top: 100px;
+  width: 100%;
+}
+
+#tool-wrapper{
+  border-style: solid;
+  border-width: 0 0 0.5 0;
+  border-color: #C8C8C8;
+
+}
+
+#editor{
+  height: 430px;
+}
