@@ -6,7 +6,7 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 
 const routes = require('./routes/index');
-const users = require('./routes/users');
+const aarposts = require('./routes/aarposts');
 const projects = require('./routes/projects');
 
 const app = express();
@@ -29,7 +29,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'bower_components')));
 
 app.use('/', routes);
-app.use('/users', users);
+app.use('/aarposts', aarposts);
 app.use('/projects',projects);
 
 app.use((req, res, next) => {

@@ -4,24 +4,28 @@ var editor = new Quill('#editor', {
     'link-tooltip': true
   },
   theme: 'snow'
-})
+});
 
-function edit( content ){
-  $("#panel-title").html(content);
+var PostModel = {"author" : "Roverzon"};
+
+
+function edit( contentTitle ){
+  $("#panel-title").html(contentTitle);
+  $("#edit-panel").removeClass('hide')
+  PostModel["title"] = contentTitle;
 }
 
 function save(){
   var inputHTML = editor.getHTML();
+   PostModel["content"] = inputHTML;
 
   $.ajax({
     method : "POST",
-    url: '/users',
-    data: {
-      "html": inputHTML
-    },
+    url: '/aarposts',
+    data: PostModel
   })
   .done(function(recordHTML) {
-    $('#record-txt').html(recordHTML["html"]);
+    $('#record-txt').html(recordHTML["content"]);
   })
   .fail(function() {
     console.log("error");
