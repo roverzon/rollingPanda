@@ -2,11 +2,11 @@
    <div class="panel panel-default">
     <div class="panel-heading">
      <h3 class="panel-title pull-left"><%= questions[i]["question"] %></h3>
-      <button class="btn btn-default pull-right">New</button>
+      <button class="btn btn-default pull-right" onclick="edit('<%= questions[i]["question"] %>')">編輯</button>
       <div class="clearfix"></div>
     </div>
     <div class="panel-body">
-      Panel content
+      <div id="record-txt"></div>
     </div>
   </div>
 <% } %>
